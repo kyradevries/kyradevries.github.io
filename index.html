@@ -1,1 +1,452 @@
+/* =========================
+  RESET
+  ========================= */
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
 
+
+/* =========================
+  ACHTERGROND HOMEPAGE
+  ========================= */
+body {
+   min-height: 100vh;
+   background-image: url("achtergrond.jpeg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   font-family: Georgia, serif;
+   padding-top: 100px;
+   padding-bottom: 70px;
+   display: flex;
+   flex-direction: column;
+}
+
+
+/* =========================
+  BOVENSTE VENSTER HOMEPAGE
+  ========================= */
+.venster {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 70px;
+   background-color: rgba(30, 28, 27, 0.96);
+   border-bottom: 2px solid #777;
+   display: flex;
+   align-items: center;
+   padding-left: 25px;
+   z-index: 100;
+}
+
+
+.venster input {
+   width: 350px;
+   height: 40px;
+   background: transparent;
+   color: white;
+   border: none;
+   outline: none;
+   padding: 10px;
+   font-family: Georgia, serif;
+   font-size: 17px;
+}
+
+
+.venster input::placeholder {
+   color: #dddddd;
+}
+
+
+/* =========================
+  TITEL HOMEPAGE
+  ========================= */
+.titel {
+   color: white;
+   text-align: center;
+   font-size: 42px;
+   font-weight: normal;
+   margin-bottom: 65px;
+   text-shadow: 0 0 10px black;
+}
+
+
+/* =========================
+  RIJEN EN BLOKKEN
+  ========================= */
+.rij {
+   display: flex;
+   align-items: center;
+   gap: 55px;
+   margin-left: 8%;
+   margin-bottom: 55px;
+   min-height: 250px;
+}
+
+
+.blok {
+   width: 500px;
+   height: 250px;
+   padding: 35px;
+   background-color: rgba(239, 225, 213, 0.5);
+   color: white;
+   border: 1px solid rgba(255, 255, 255, 0.55);
+   border-radius: 10px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   flex-shrink: 0;
+   transition: 0.3s ease;
+}
+
+
+.blok h2 {
+   color: white;
+   font-size: 28px;
+   font-weight: normal;
+   margin-bottom: 20px;
+}
+
+
+.blok p {
+   color: #020202;
+   font-size: 17px;
+   line-height: 1.6;
+}
+
+
+.afbeelding {
+   width: 350px;
+   height: 250px;
+   object-fit: contain;
+   display: block;
+   background: transparent;
+   border: none;
+   flex-shrink: 0;
+}
+
+
+.blok:hover {
+   transform: scale(1.05);
+   border: 2px solid white;
+   box-shadow: 0 0 12px rgba(247, 243, 243, 0.35), 0 0 30px rgba(247, 208, 240, 0.7);
+}
+
+
+/* =========================
+  FOOTER
+  ========================= */
+.footer-block {
+   margin-top: auto;
+   width: 100%;
+   padding: 30px 0;
+   text-align: center;
+}
+
+
+.pagina2-btn {
+   color: white;
+   font-size: 20px;
+   text-decoration: none;
+   padding: 10px 20px;
+   border: 1px solid white;
+   border-radius: 5px;
+   background: rgba(0, 0, 0, 0.5);
+   transition: 0.3s;
+}
+
+
+.pagina2-btn:hover {
+   background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* =========================
+  TAROT PAGINA
+  ========================= */
+.tarot-pagina {
+   margin: 0;
+   min-height: 100vh;
+   background-image: url("achtergrond2.jpeg");
+   background-size: cover;
+   background-position: center top;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   font-family: Georgia, serif;
+   padding-top: 120px;
+}
+
+
+.gordijn {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 430px;
+   height: auto;
+   z-index: 10;
+   pointer-events: none;
+}
+
+
+.top-window {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 90px;
+   background: rgba(15, 10, 7, 0.88);
+   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+   display: flex;
+   align-items: center;
+   z-index: 20;
+}
+
+
+.home-link {
+   color: white;
+   text-decoration: none;
+   font-size: 20px;
+   margin-left: 40px;
+   transition: 0.3s ease;
+}
+
+
+.home-link:hover {
+   color: #d8b477;
+}
+
+
+#zoekbalk {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 500px;
+   height: 42px;
+   padding: 10px 18px;
+   background: rgba(0, 0, 0, 0.35);
+   border: 1px solid rgba(255, 255, 255, 0.45);
+   border-radius: 8px;
+   color: rgb(184, 169, 169);
+   font-family: Georgia, serif;
+   font-size: 16px;
+   outline: none;
+}
+
+
+#zoekbalk::placeholder {
+   color: rgba(255, 255, 255, 0.75);
+}
+
+
+#zoekresultaten {
+   position: fixed;
+   top: 100px;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 500px;
+   z-index: 100;
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+
+.tarot-pagina .page-title {
+   position: relative;
+   margin-top: 30px;
+   margin-bottom: 60px;
+   text-align: center;
+   color: #f5e6c8;
+   font-size: 42px;
+   font-weight: normal;
+   z-index: 5;
+}
+
+
+.tarot-container {
+   width: 100%;
+   padding-bottom: 100px;
+   position: relative;
+   z-index: 5;
+}
+
+
+.tarot-rij {
+   width: 1000px;
+   margin: 0 auto 60px auto;
+   display: flex;
+   align-items: center;
+   gap: 50px;
+}
+
+
+.tarot-blok {
+   width: 700px;
+   min-height: 280px;
+   padding: 30px;
+   background: rgba(20, 12, 8, 0.88);
+   border: 1px solid #c9a45c;
+   border-radius: 8px;
+   color: #f5e6c8;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   transition: 0.3s ease;
+}
+
+
+.tarot-blok h2 {
+   margin: 0;
+   font-size: 28px;
+   font-weight: normal;
+}
+
+
+.tarot-afbeelding {
+   width: 250px;
+   height: 280px;
+   flex-shrink: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+.tarot-afbeelding img {
+   max-width: 100%;
+   max-height: 100%;
+   object-fit: contain;
+}
+
+
+.tarot-blok:hover {
+   transform: scale(1.03);
+   border-color: #f5e6c8;
+   box-shadow: 0 0 10px rgba(201, 164, 92, 0.4), 0 0 25px rgba(201, 164, 92, 0.25);
+}
+
+tarot.js
+// Alle 78 Tarotkaarten (Alleen namen)
+const tarotKaarten = [
+   "0 — The Fool", "I — The Magician", "II — The High Priestess", "III — The Empress",
+   "IV — The Emperor", "V — The Hierophant", "VI — The Lovers", "VII — The Chariot",
+   "VIII — Strength", "IX — The Hermit", "X — Wheel of Fortune", "XI — Justice",
+   "XII — The Hanged Man", "XIII — Death", "XIV — Temperance", "XV — The Devil",
+   "XVI — The Tower", "XVII — The Star", "XVIII — The Moon", "XIX — The Sun",
+   "XX — Judgement", "XXI — The World",
+
+
+   "Ace of Wands", "Two of Wands", "Three of Wands", "Four of Wands", "Five of Wands",
+   "Six of Wands", "Seven of Wands", "Eight of Wands", "Nine of Wands", "Ten of Wands",
+   "Page of Wands", "Knight of Wands", "Queen of Wands", "King of Wands",
+
+
+   "Ace of Cups", "Two of Cups", "Three of Cups", "Four of Cups", "Five of Cups",
+   "Six of Cups", "Seven of Cups", "Eight of Cups", "Nine of Cups", "Ten of Cups",
+   "Page of Cups", "Knight of Cups", "Queen of Cups", "King of Cups",
+
+
+   "Ace of Swords", "Two of Swords", "Three of Swords", "Four of Swords", "Five of Swords",
+   "Six of Swords", "Seven of Swords", "Eight of Swords", "Nine of Swords", "Ten of Swords",
+   "Page of Swords", "Knight of Swords", "Queen of Swords", "King of Swords",
+
+
+   "Ace of Pentacles", "Two of Pentacles", "Three of Pentacles", "Four of Pentacles", "Five of Pentacles",
+   "Six of Pentacles", "Seven of Pentacles", "Eight of Pentacles", "Nine of Pentacles", "Ten of Pentacles",
+   "Page of Pentacles", "Knight of Pentacles", "Queen of Pentacles", "King of Pentacles"
+];
+
+
+document.addEventListener("DOMContentLoaded", function () {
+   const container = document.getElementById("tarot-container");
+
+
+   if (container) {
+       container.innerHTML = "";
+
+
+       tarotKaarten.forEach(function (kaart) {
+           const rij = document.createElement("div");
+           rij.className = "tarot-rij";
+
+
+           // Genereert nu alleen het tekstblok zonder <img> tag
+           rij.innerHTML = `
+               <div class="tarot-blok">
+                   <h2>${kaart}</h2>
+               </div>
+           `;
+
+
+           container.appendChild(rij);
+       });
+   }
+});
+
+
+search.js
+window.addEventListener("load", function () {
+   const zoekbalk = document.getElementById("zoekbalk");
+   const zoekresultaten = document.getElementById("zoekresultaten");
+
+
+   if (!zoekbalk) {
+       return;
+   }
+
+
+   zoekbalk.addEventListener("keydown", function (e) {
+       if (e.key === "Enter") {
+           e.preventDefault();
+       }
+   });
+
+
+   zoekbalk.addEventListener("input", function () {
+       const zoekterm = zoekbalk.value.toLowerCase().trim();
+       const kaarten = document.querySelectorAll(".tarot-rij");
+       let aantalGevonden = 0;
+
+
+       if (zoekterm === "") {
+           kaarten.forEach(function (kaart) {
+               kaart.style.display = "flex";
+           });
+           if (zoekresultaten) zoekresultaten.innerHTML = "";
+           return;
+       }
+
+
+       kaarten.forEach(function (kaart) {
+           const titel = kaart.querySelector("h2");
+           if (titel) {
+               const naam = titel.textContent.toLowerCase();
+               if (naam.includes(zoekterm)) {
+                   kaart.style.display = "flex";
+                   aantalGevonden++;
+               } else {
+                   kaart.style.display = "none";
+               }
+           }
+       });
+
+
+       if (zoekresultaten) {
+           if (aantalGevonden === 0) {
+               zoekresultaten.innerHTML = `
+                   <div style="text-align: center; color: white; padding: 15px; font-weight: bold;">
+                       No tarot card found.
+                   </div>
+               `;
+           } else {
+               zoekresultaten.innerHTML = "";
+           }
+       }
+   });
+});
