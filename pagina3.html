@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Music</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Achtergrond -->
+    <div class="background"></div>
+
+
+    <!-- Navigatie -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            Welcome to my website ୭
+        </a>
+
+        <nav class="nav-links">
+         <a href="index.html">Home</a>
+         <a href="pagina2.html">About me</a>
+         <a href="pagina3.html">Music</a>
+       </nav>
+
+        <div class="search-container">
+
+            <input
+                type="search"
+                placeholder="Search..."
+                aria-label="Search"
+            >
+
+            <button type="button" aria-label="Search">
+                🔍
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- Hoofdcontent -->
+    <main>
+
+        <section class="intro-card music-card">
+
+            <h1>My Music ♫</h1>
+
+            <p>
+                Welcome to my music corner!
+            </p>
+
+            <p>
+                Hier kun je naar mijn favoriete frutiger aero sound luisteren
+                terwijl je mijn website bekijkt.
+            </p>
+
+
+            <!-- Muziek -->
+            <audio id="muziek" src="lofi.mp3"></audio>
+
+
+            <!-- Windows Media Player afbeelding -->
+            <img
+                id="musicButton"
+                src="Windows media player.jpeg"
+                alt="Klik om muziek af te spelen"
+                class="music-player"
+            >
+
+
+            <p class="music-text">
+                Klik op de afbeelding om de muziek af te spelen ‧₊ ♪˚⊹
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Muziek JavaScript -->
+    <script>
+
+        const musicButton = document.getElementById("musicButton");
+        const muziek = document.getElementById("muziek");
+
+        musicButton.addEventListener("click", function () {
+
+            if (muziek.paused) {
+
+                muziek.play();
+
+            } else {
+
+                muziek.pause();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
