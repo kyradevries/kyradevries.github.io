@@ -1,167 +1,110 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>My Music</title>
 
-   <title>About me - My Website</title>
-
-
-   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-
-   <!-- Achtergrond -->
-   <div class="background"></div>
-
+    <!-- Achtergrond -->
+    <div class="background"></div>
 
 
+    <!-- Navigatie -->
+    <header class="navbar">
 
-   <!-- Navigatie -->
-   <header class="navbar">
+        <a href="index.html" class="logo">
+            Welcome to my website ୭
+        </a>
 
-
-       <a href="index.html" class="logo">
-           Welcome to my website
-       </a>
-
-
-       <nav class="nav-links">
-           <a href="index.html">Home</a>
-           <a href="pagina2.html" class="active">Pagina 2</a>
+        <nav class="nav-links">
+         <a href="index.html">Home</a>
+         <a href="pagina2.html">About me</a>
+         <a href="pagina3.html">Music</a>
        </nav>
 
+        <div class="search-container">
 
-       <div class="search-container">
+            <input
+                type="search"
+                placeholder="Search..."
+                aria-label="Search"
+            >
 
+            <button type="button" aria-label="Search">
+                🔍
+            </button>
 
-           <input
-               type="search"
-               placeholder="Search..."
-               aria-label="Search"
-           >
+        </div>
 
+    </header>
 
-           <button type="button">
-               🔍
-           </button>
 
+    <!-- Hoofdcontent -->
+    <main>
 
-       </div>
+        <section class="intro-card music-card">
 
+            <h1>My Music ♫</h1>
 
-   </header>
+            <p>
+                Welcome to my music corner!
+            </p>
 
+            <p>
+                Hier kun je naar mijn favoriete frutiger aero sound luisteren
+                terwijl je mijn website bekijkt.
+            </p>
 
 
+            <!-- Muziek -->
+            <audio id="muziek" src="lofi.mp3"></audio>
 
-   <!-- Hoofdcontent -->
-   <main>
 
+            <!-- Windows Media Player afbeelding -->
+            <img
+                id="musicButton"
+                src="Windows media player.jpeg"
+                alt="Klik om muziek af te spelen"
+                class="music-player"
+            >
 
-       <section class="intro-card page-two">
 
+            <p class="music-text">
+                Klik op de afbeelding om de muziek af te spelen ‧₊ ♪˚⊹
+            </p>
 
-           <h1>About Me</h1>
+        </section>
 
+    </main>
 
-           <p>
-               .˚‧₊🌐˚₊˚ 🍀 ○ₒ° ♡
-           </p>
 
+    <!-- Muziek JavaScript -->
+    <script>
 
-           <p>
-               Op deze pagina kun je meer over mij, mijn interesses
-               en mijn projecten ontdekken.
-           </p>
+        const musicButton = document.getElementById("musicButton");
+        const muziek = document.getElementById("muziek");
 
+        musicButton.addEventListener("click", function () {
 
+            if (muziek.paused) {
 
+                muziek.play();
 
-           <div class="content-boxes">
+            } else {
 
+                muziek.pause();
 
-               <div class="content-box">
+            }
 
+        });
 
-                   <h2>Wie ben ik?⋆˚࿔</h2>
-
-
-                   <p>
-                       Hallo, ik ben Kyra. Ik ben 15 jaar oud en ik zit momenteel in de 4e klas van de havo.
-                       Ik hou van afspreken met vrienden, series en films kijken en ik hou van de stijl frutiger aero.
-
-
-                   </p>
-
-
-               </div>
-
-
-
-
-               <div class="content-box">
-
-
-                   <h2>💻 Mijn projecten</h2>
-
-
-                   <p>
-                       Deze website is een van mijn codering projecten. Samen met de hulp van mijn vriendin (livmsuperz) en AI heb ik deze website kunnen bouwen.
-                   </p>
-
-
-               </div>
-
-
-
-
-               <div class="content-box">
-
-
-                   <h2>frutiger aero</h2>
-
-
-                   <p>
-                       Frutiger Aero ontstond vooral in de jaren 2000, toen technologie steeds moderner werd.
-                       De stijl werd veel gebruikt in websites, reclame, computers en software.
-                       Het doel was om technologie een vriendelijke, vrolijke en frisse uitstraling te geven.
-                       De stijl werd later bekend als Frutiger Aero,
-
-
-                   </p>
-
-
-               </div>
-
-
-           </div>
-
-
-
-
-           <a href="index.html" class="learn-more">
-               ← Terug naar home
-           </a>
-
-
-       </section>
-
-
-   </main>
-
-
-
-
-   <!-- Footer -->
-   <footer>
-       <p>© 2026 My Website</p>
-   </footer>
-
+    </script>
 
 </body>
 </html>
