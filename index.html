@@ -9,6 +9,56 @@
 
 
    <link rel="stylesheet" href="style.css">
+   <style>
+   .dropbtn {
+    background-color: #4cafad;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e8a;
+}
+</style>
+
+</head>
+<div class="dropdown">
+  <button class="dropbtn">Dropdown Menu</button>
+  <div class="dropdown-content">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  </div>
+</div>
 </head>
 
 
@@ -31,7 +81,14 @@
        <a href="index.html" class="active">Home</a>
        <a href="pagina2.html">About me</a>
        <a href="pagina3.html">Music</a>
-       <a href="binairstelsel.html">Het binairstelsel</a>
+       <div class="dropdown">
+         <button class="dropbtn">Computer science</button>
+         <div class="dropdown-content">
+         <a href="binairstelsel.html">Het binairstelsel</a>
+         <a href="#">Link 2</a>
+         <a href="#">Link 3</a>
+  </div>
+</div>
    </nav>
 
 
