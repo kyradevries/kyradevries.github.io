@@ -1,698 +1,165 @@
-/* ========================================
-   ALGEMENE INSTELLINGEN
-======================================== */
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
+   <title>About me - My Website</title>
 
-html {
-    scroll-behavior: smooth;
-}
 
+   <link rel="stylesheet" href="style.css">
+</head>
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
 
-    min-height: 100vh;
+<body>
 
-    color: white;
 
-    background:
-        radial-gradient(
-            circle at 12% 20%,
-            rgba(255,255,255,.35) 0 2px,
-            transparent 3px
-        ),
+   <!-- Achtergrond -->
+   <div class="background"></div>
 
-        radial-gradient(
-            circle at 82% 25%,
-            rgba(255,255,255,.28) 0 7px,
-            transparent 8px
-        ),
 
-        radial-gradient(
-            circle at 72% 75%,
-            rgba(255,255,255,.18) 0 18px,
-            transparent 19px
-        ),
 
-        linear-gradient(
-            135deg,
-            #1267b5 0%,
-            #19a8c2 38%,
-            #64b85a 72%,
-            #b8d86b 100%
-        );
 
-    background-attachment: fixed;
+   <!-- Navigatie -->
+   <header class="navbar">
 
-    overflow-x: hidden;
-}
 
+       <a href="index.html" class="logo">
+           Welcome to my website
+       </a>
 
-/* ========================================
-   EXTRA ACHTERGRONDEFFECTEN
-======================================== */
 
-body::before,
-body::after {
+       <nav class="nav-links">
+           <a href="index.html">Home</a>
+           <a href="pagina2.html" class="active">Pagina 2</a>
+           <a href="pagina3.html">Music</a>
+       </nav>
 
-    content: "";
 
-    position: fixed;
+       <div class="search-container">
 
-    border-radius: 50%;
 
-    pointer-events: none;
+           <input
+               type="search"
+               placeholder="Search..."
+               aria-label="Search"
+           >
 
-    z-index: -1;
-}
 
+           <button type="button">
+               🔍
+           </button>
 
-body::before {
 
-    width: 330px;
-    height: 330px;
+       </div>
 
-    left: -100px;
-    bottom: -100px;
 
-    background: rgba(255,255,255,.12);
+   </header>
 
-    box-shadow:
-        420px -520px 0 80px rgba(255,255,255,.07),
-        950px -180px 0 40px rgba(255,255,255,.09);
-}
 
 
-body::after {
 
-    width: 180px;
-    height: 180px;
+   <!-- Hoofdcontent -->
+   <main>
 
-    right: 30px;
-    top: 120px;
 
-    background: rgba(255,255,255,.10);
+       <section class="intro-card page-two">
 
-    box-shadow:
-        -650px 400px 0 35px rgba(255,255,255,.08);
-}
 
+           <h1>About Me</h1>
 
-/* ========================================
-   NAVIGATIE
-======================================== */
 
-.navbar {
+           <p>
+               .˚‧₊🌐˚₊˚ 🍀 ○ₒ° ♡
+           </p>
 
-    width: calc(100% - 64px);
 
-    max-width: 1300px;
+           <p>
+               Op deze pagina kun je meer over mij, mijn interesses
+               en mijn projecten ontdekken.
+           </p>
 
-    margin: 28px auto 0;
 
-    padding: 18px 24px;
 
-    display: flex;
 
-    align-items: center;
+           <div class="content-boxes">
 
-    justify-content: space-between;
 
-    gap: 20px;
+               <div class="content-box">
 
 
-    background: rgba(255,255,255,.16);
+                   <h2>Wie ben ik?⋆˚࿔</h2>
 
-    border: 1px solid rgba(255,255,255,.38);
 
-    border-radius: 24px;
+                   <p>
+                       Hallo, ik ben Kyra. Ik ben 15 jaar oud en ik zit momenteel in de 4e klas van de havo.
+                       Ik hou van afspreken met vrienden, series en films kijken en ik hou van de stijl frutiger aero.
 
 
-    backdrop-filter: blur(16px);
+                   </p>
 
-    -webkit-backdrop-filter: blur(16px);
 
+               </div>
 
-    box-shadow:
-        0 12px 35px rgba(0,0,0,.12);
-}
 
 
-/* Logo */
 
-.logo {
+               <div class="content-box">
 
-    font-size: 24px;
 
-    font-weight: 700;
+                   <h2>💻 Mijn projecten</h2>
 
-    white-space: nowrap;
-}
 
+                   <p>
+                       Deze website is een van mijn codering projecten. Samen met de hulp van mijn vriendin (livmsuperz) en AI heb ik deze website kunnen bouwen.
+                   </p>
 
-/* Navigatie links */
 
-nav {
+               </div>
 
-    display: flex;
 
-    align-items: center;
 
-    gap: 8px;
-}
 
+               <div class="content-box">
 
-nav a {
 
-    color: white;
+                   <h2>frutiger aero</h2>
 
-    text-decoration: none;
 
-    padding: 12px 18px;
+                   <p>
+                       binair
 
-    border-radius: 16px;
 
-    transition: .25s ease;
-}
+                   </p>
 
 
-nav a:hover,
-nav a.active {
+               </div>
 
-    background: rgba(255,255,255,.20);
 
-    transform: translateY(-1px);
-}
+           </div>
 
 
-/* ========================================
-   ZOEKBALK
-======================================== */
 
-.search {
 
-    display: flex;
+           <a href="index.html" class="learn-more">
+               ← Terug naar home
+           </a>
 
-    align-items: center;
 
-    gap: 8px;
+       </section>
 
-    padding: 10px 14px;
 
-    border:
-        1px solid rgba(255,255,255,.35);
+   </main>
 
-    border-radius: 22px;
 
-    background:
-        rgba(255,255,255,.10);
-}
 
 
-.search input {
+   <!-- Footer -->
+   <footer>
+       <p>© 2026 My Website</p>
+   </footer>
 
-    width: 120px;
 
-    border: none;
-
-    outline: none;
-
-    background: transparent;
-
-    color: white;
-
-    font-size: 15px;
-}
-
-
-.search input::placeholder {
-
-    color:
-        rgba(255,255,255,.85);
-}
-
-
-/* ========================================
-   HOOFDGEDEELTE
-======================================== */
-
-.container {
-
-    width: calc(100% - 64px);
-
-    max-width: 1000px;
-
-    margin: 68px auto 50px;
-
-    padding: 48px;
-
-    text-align: center;
-
-
-    background:
-        rgba(255,255,255,.17);
-
-    border:
-        1px solid rgba(255,255,255,.40);
-
-    border-radius: 30px;
-
-
-    backdrop-filter:
-        blur(18px);
-
-    -webkit-backdrop-filter:
-        blur(18px);
-
-
-    box-shadow:
-        0 18px 50px rgba(0,0,0,.16);
-}
-
-
-/* ========================================
-   TITEL
-======================================== */
-
-h1 {
-
-    font-size:
-        clamp(38px, 6vw, 64px);
-
-    margin-bottom: 12px;
-}
-
-
-.symbols {
-
-    font-size: 28px;
-
-    letter-spacing: 8px;
-
-    margin-bottom: 20px;
-}
-
-
-.intro {
-
-    max-width: 720px;
-
-    margin:
-        0 auto 35px;
-
-    line-height: 1.7;
-
-    font-size: 17px;
-}
-
-
-/* ========================================
-   KAARTJES
-======================================== */
-
-.cards {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 20px;
-
-    text-align: left;
-}
-
-
-.card {
-
-    padding: 25px;
-
-    border-radius: 22px;
-
-    background:
-        rgba(255,255,255,.18);
-
-    border:
-        1px solid rgba(255,255,255,.30);
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.08);
-
-    transition: .25s ease;
-}
-
-
-.card:hover {
-
-    transform:
-        translateY(-5px);
-
-    background:
-        rgba(255,255,255,.23);
-}
-
-
-.card h2 {
-
-    margin-bottom: 13px;
-
-    font-size: 21px;
-}
-
-
-.card p {
-
-    line-height: 1.65;
-
-    color:
-        rgba(255,255,255,.94);
-}
-
-
-/* ========================================
-   PLAATSWAARDEN
-======================================== */
-
-.place-values {
-
-    margin-top: 30px;
-
-    padding: 25px;
-
-    border-radius: 22px;
-
-    background:
-        rgba(255,255,255,.14);
-
-    border:
-        1px solid rgba(255,255,255,.28);
-}
-
-
-.table {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(6, 1fr);
-
-    gap: 8px;
-
-    margin-top: 18px;
-}
-
-
-.cell {
-
-    padding: 13px 6px;
-
-    border-radius: 12px;
-
-    background:
-        rgba(255,255,255,.18);
-
-    transition: .2s ease;
-}
-
-
-.cell:hover {
-
-    background:
-        rgba(255,255,255,.28);
-
-    transform:
-        scale(1.03);
-}
-
-
-.cell strong {
-
-    display: block;
-
-    font-size: 19px;
-
-    margin-bottom: 5px;
-}
-
-
-/* ========================================
-   VOORBEELD
-======================================== */
-
-.example {
-
-    margin-top: 30px;
-
-    padding: 22px;
-
-    text-align: left;
-
-    border-radius: 18px;
-
-    background:
-        rgba(0,0,0,.10);
-
-    border:
-        1px solid rgba(255,255,255,.15);
-}
-
-
-.example code {
-
-    font-size: 18px;
-
-    line-height: 1.7;
-}
-
-
-/* ========================================
-   OMREKENAAR
-======================================== */
-
-.converter {
-
-    margin-top: 30px;
-
-    padding: 28px;
-
-    border-radius: 22px;
-
-    background:
-        rgba(255,255,255,.18);
-
-    border:
-        1px solid rgba(255,255,255,.30);
-}
-
-
-.converter h2 {
-
-    margin-bottom: 8px;
-}
-
-
-.converter p {
-
-    margin-bottom: 18px;
-
-    line-height: 1.5;
-}
-
-
-.input-row {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 10px;
-
-    flex-wrap: wrap;
-}
-
-
-.input-row input {
-
-    width: 230px;
-
-    padding: 14px 16px;
-
-    border:
-        1px solid rgba(255,255,255,.45);
-
-    border-radius: 14px;
-
-    outline: none;
-
-    font-size: 17px;
-
-    background:
-        rgba(255,255,255,.85);
-
-    color: #164d66;
-}
-
-
-.input-row input:focus {
-
-    box-shadow:
-        0 0 0 3px rgba(255,255,255,.25);
-}
-
-
-/* Knop */
-
-button {
-
-    border: none;
-
-    padding: 14px 20px;
-
-    border-radius: 14px;
-
-    cursor: pointer;
-
-    font-size: 16px;
-
-    font-weight: bold;
-
-    color: #15516a;
-
-    background:
-        rgba(255,255,255,.86);
-
-    transition: .2s ease;
-}
-
-
-button:hover {
-
-    transform:
-        translateY(-2px);
-
-    background: white;
-}
-
-
-button:active {
-
-    transform:
-        translateY(0);
-}
-
-
-/* Resultaat */
-
-#result {
-
-    margin-top: 18px;
-
-    min-height: 28px;
-
-    font-size: 20px;
-
-    font-weight: bold;
-}
-
-
-/* ========================================
-   FOOTER
-======================================== */
-
-footer {
-
-    margin-top: 30px;
-
-    opacity: .8;
-
-    font-size: 14px;
-}
-
-
-/* ========================================
-   TABLET
-======================================== */
-
-@media (max-width: 800px) {
-
-    .navbar {
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-    }
-
-
-    .logo {
-
-        width: 100%;
-
-        text-align: center;
-    }
-
-
-    .cards {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    .container {
-
-        padding: 30px 20px;
-    }
-
-
-    .table {
-
-        grid-template-columns:
-            repeat(3, 1fr);
-    }
-}
-
-
-/* ========================================
-   TELEFOON
-======================================== */
-
-@media (max-width: 500px) {
-
-    .navbar,
-    .container {
-
-        width:
-            calc(100% - 24px);
-    }
-
-
-    nav {
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-    }
-
-
-    .search {
-
-        width: 100%;
-    }
-
-
-    .search input {
-
-        width: 100%;
-    }
-
-
-    h1 {
-
-        font-size: 40px;
-    }
-}
+</body>
+</html>
