@@ -1,389 +1,169 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mijn wereld</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+   <title>binairstelsel</title>
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: Arial, Helvetica, sans-serif;
-      color: white;
+   <link rel="stylesheet" href="style.css">
 
-      background:
-        linear-gradient(
-          180deg,
-          rgba(0, 65, 180, 0.20),
-          rgba(0, 100, 50, 0.12)
-        ),
-        url("achtergrond.jpg") center / cover fixed no-repeat,
-        linear-gradient(
-          #168de0 0%,
-          #75d9e2 48%,
-          #8fcf62 75%,
-          #287c36 100%
-        );
-    }
-
-    .page {
-      width: min(1100px, 94%);
-      min-height: 100vh;
-      margin: 0 auto;
-      padding: 34px 48px 48px;
-      text-align: center;
-
-      background: rgba(220, 250, 255, 0.17);
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      border-top: 0;
-      border-radius: 0 0 28px 28px;
-
-      box-shadow: 0 10px 40px rgba(0, 45, 100, 0.22);
-      backdrop-filter: blur(10px);
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2.2rem, 5vw, 3.2rem);
-      text-shadow: 0 3px 15px rgba(0, 35, 90, 0.3);
-    }
-
-    .sparkles {
-      margin: 14px 0 22px;
-      letter-spacing: 8px;
-      font-size: 1.2rem;
-      text-shadow: 0 2px 8px rgba(0, 50, 90, 0.35);
-    }
-
-    .intro {
-      max-width: 650px;
-      margin: 0 auto 34px;
-      line-height: 1.7;
-      font-size: 1.05rem;
-      text-shadow: 0 1px 5px rgba(0, 35, 65, 0.3);
-    }
-
-    /* Glazen kaarten */
-    .feature-card {
-      text-align: left;
-      padding: 24px;
-
-      background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.36),
-        rgba(255, 255, 255, 0.12)
-      );
-
-      border: 1px solid rgba(255, 255, 255, 0.48);
-      border-radius: 24px 24px 38px 24px;
-
-      box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.38),
-        0 12px 28px rgba(0, 55, 100, 0.12);
-
-      backdrop-filter: blur(14px);
-
-      transition:
-        transform 0.22s ease,
-        background 0.22s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-5px);
-
-      background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.46),
-        rgba(255, 255, 255, 0.19)
-      );
-    }
-
-    /* Brede kaart bovenaan */
-    .main-card {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      margin-bottom: 20px;
-    }
-
-    /* Ronde icoontjes */
-    .icon-bubble {
-      display: grid;
-      place-items: center;
-      flex: 0 0 76px;
-
-      width: 76px;
-      height: 76px;
-
-      font-size: 2rem;
-      border-radius: 24px;
-
-      background: rgba(255, 255, 255, 0.25);
-      border: 1px solid rgba(255, 255, 255, 0.45);
-
-      box-shadow:
-        inset 0 2px 10px rgba(255, 255, 255, 0.22);
-    }
-
-    h2 {
-      margin: 0 0 10px;
-      font-size: 1.25rem;
-    }
-
-    .feature-card p {
-      margin: 0;
-      line-height: 1.65;
-      color: rgba(255, 255, 255, 0.96);
-      text-shadow: 0 1px 4px rgba(0, 40, 60, 0.24);
-    }
-
-    /* Twee kaarten naast elkaar */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .mini-card {
-      min-height: 205px;
-      border-radius: 34px 20px 34px 20px;
-    }
-
-    .mini-card .icon-bubble {
-      margin-bottom: 16px;
-      width: 58px;
-      height: 58px;
-      flex-basis: 58px;
-
-      border-radius: 20px 20px 20px 8px;
-      font-size: 1.65rem;
-    }
-
-    /* Klein label */
-    .tag {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 7px 12px;
-
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.23);
-      border: 1px solid rgba(255, 255, 255, 0.35);
-
-      font-size: 0.85rem;
-    }
-
-    footer {
-      margin-top: 28px;
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.85);
-      text-shadow: 0 1px 4px rgba(0, 40, 60, 0.25);
-    }
-
-    /* Geschikt voor telefoons */
-    @media (max-width: 650px) {
-      .page {
-        padding: 28px 18px;
+   <style>
+      /* Alleen de indeling van de blokjes aangepast */
+      .content-boxes {
+         display: grid;
+         grid-template-columns: repeat(2, minmax(0, 1fr));
+         gap: 22px;
+         margin-top: 28px;
       }
 
-      .main-card {
-        align-items: flex-start;
-        flex-direction: column;
+      /* Het eerste blok is breder */
+      .content-box:first-child {
+         grid-column: 1 / -1;
+         display: flex;
+         align-items: center;
+         gap: 25px;
+         text-align: left;
       }
 
-      .card-grid {
-        grid-template-columns: 1fr;
+      .content-box:first-child h2 {
+         min-width: 100px;
+         font-size: 30px;
       }
 
-      .mini-card {
-        min-height: 0;
+      /* De twee onderste blokjes */
+      .content-box:nth-child(2),
+      .content-box:nth-child(3) {
+         min-height: 220px;
+         text-align: center;
+         border-radius: 30px 18px 30px 18px;
       }
-    }
-  </style>
+
+      .content-box {
+         transition: transform 0.25s ease;
+      }
+
+      .content-box:hover {
+         transform: translateY(-5px);
+      }
+
+      @media (max-width: 650px) {
+         .content-boxes {
+            grid-template-columns: 1fr;
+         }
+
+         .content-box:first-child {
+            grid-column: auto;
+            flex-direction: column;
+            align-items: flex-start;
+         }
+      }
+   </style>
 </head>
 
 <body>
 
-  <main class="page">
+   <!-- Achtergrond -->
+   <div class="background"></div>
 
-    <h1>Mijn wereld</h1>
+   <!-- Navigatie -->
+   <header class="navbar">
 
-    <div class="sparkles" aria-hidden="true">
-      ✧ 🌐 ✦ 🍀 ♡
-    </div>
+       <a href="index.html" class="logo">
+           Welcome to my website
+       </a>
 
-    <p class="intro">
-      Een klein kijkje in mijn online wereld — ontdek wat ik leuk vind,
-      waar ik aan werk en welke ideeën ik nog wil uitproberen.
-    </p>
+       <nav class="nav-links">
+          <a href="index.html" class="active">Home</a>
+          <a href="pagina2.html">het binairstelsel</a>
+          <a href="pagina3.html">Music</a>
+          <a href="binairstelsel.html">Het binairstelsel</a>
+       </nav>
 
-    <!-- Brede kaart -->
-    <section class="feature-card main-card">
+       <div class="search-container">
+           <input
+               type="search"
+               placeholder="Search..."
+               aria-label="Search"
+           >
 
-      <div class="icon-bubble" aria-hidden="true">
-        🌈
-      </div>
+           <button type="button">🔍</button>
+       </div>
 
-      <div>
-        <h2>Wat vind ik leuk?</h2>
+   </header>
 
-        <p>
-          Hier kun je vertellen over je hobby's, favoriete series,
-          muziek, games of andere dingen waar je blij van wordt.
-          Pas deze tekst aan zodat hij helemaal bij jou past.
-        </p>
+   <!-- Hoofdcontent -->
+   <main>
 
-        <span class="tag">✨ Mijn favorieten</span>
-      </div>
+       <section class="intro-card page-two">
 
-    </section>
+           <h1>het binairstelsel</h1>
 
-    <!-- Twee kleinere kaarten -->
-    <section class="card-grid">
+           <p>
+               .˚‧₊🌐˚₊˚ 🍀 ○ₒ° ♡
+           </p>
 
-      <article class="feature-card mini-card">
+           <p>
+               dit is informatie over het binairstelsel en hoe het werkt
+           </p>
 
-        <div class="icon-bubble" aria-hidden="true">
-          💻
-        </div>
+           <div class="content-boxes">
 
-        <h2>Waar ik aan werk</h2>
+               <div class="content-box">
 
-        <p>
-          Een plek voor je websites, creatieve ideeën en projecten.
-          Vertel wat je aan het maken bent of wat je graag nog wilt leren.
-        </p>
+                   <h2>⋆˚࿔</h2>
 
-      </article>
+                   <p>
+                       Het binaire stelsel is een manier om getallen te
+                       schrijven met maar twee cijfers: 0 en 1. In ons
+                       gewone getallenstelsel gebruiken we de cijfers
+                       0 tot en met 9.
+                   </p>
 
-      <article class="feature-card mini-card">
+               </div>
 
-        <div class="icon-bubble" aria-hidden="true">
-          🫧
-        </div>
+               <div class="content-box">
 
-        <h2>Mijn inspiratie</h2>
+                   <h2>💻 hoe werkt het binairstelsel</h2>
 
-        <p>
-          Kleuren, natuur, oude technologie en alles met een frisse
-          Frutiger Aero-vibe. Dit is jouw hoekje voor inspiratie.
-        </p>
+                   <p>
+                       Elke positie in een binair getal heeft een andere
+                       waarde. Van rechts naar links zijn dat 1, 2, 4, 8,
+                       16 enzovoort. Bijvoorbeeld: het binaire getal 1011
+                       is gelijk aan 11 in ons gewone getallenstelsel.
+                   </p>
 
-      </article>
+               </div>
 
-    </section>
+               <div class="content-box">
 
-    <footer>
-      gemaakt met ☁️, waterdruppels en een beetje nostalgie
-    </footer>
+                   <h2>Waar wordt het binaire stelsel gebruikt?</h2>
 
-  </main>
+                   <p>
+                       Het binaire stelsel wordt vooral gebruikt in
+                       computers, telefoons en andere digitale apparaten.
+                       Deze apparaten werken met elektrische signalen die
+                       twee toestanden hebben: aan (1) en uit (0). Zo
+                       kunnen ze informatie opslaan en verwerken.
+                   </p>
 
-</body>
-</html>
+               </div>
 
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mijn website</title>
+           </div>
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: url("achtergrond.jpg") center/cover fixed;
-}
+           <a href="index.html" class="learn-more">
+               ← Terug naar home
+           </a>
 
-.navbar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 16px 30px;
-  background: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(12px);
-}
+       </section>
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 12px 16px;
-  border-radius: 18px;
-  white-space: nowrap;
-  transition: 0.3s;
-}
+   </main>
 
-.navbar a:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.navbar a.active {
-  background: rgba(255, 255, 255, 0.35);
-}
-
-.search {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 30px;
-  padding: 10px 14px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.search input {
-  width: 160px;
-  border: none;
-  outline: none;
-  background: transparent;
-  color: white;
-  font-size: 15px;
-}
-
-.search input::placeholder {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.search button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-@media (max-width: 700px) {
-  .navbar {
-    flex-wrap: wrap;
-    padding: 12px;
-  }
-
-  .search {
-    margin-left: 0;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<nav class="navbar">
-  <a href="index.html" class="active">Home</a>
-  <a href="binairstelsel.html">het binairstelsel</a>
-  <a href="music.html">Music</a>
-  <a href="mijn_wereld.html">Mijn wereld</a>
-
-  <form class="search" action="index.html" method="get">
-    <input type="text" name="q" placeholder="Search...">
-    <button type="submit" aria-label="Zoeken">🔎</button>
-  </form>
-</nav>
+   <!-- Footer -->
+   <footer>
+       <p>© 2026 My Website</p>
+   </footer>
 
 </body>
 </html>
+
