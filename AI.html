@@ -1,85 +1,83 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
+<head> 
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>binairstelsel</title>
+<link rel="stylesheet" href="https://cdn.cursors-4u.net/cursors/animated/bubbles-ec01c1f3-32.css">
+
+
+   <title>My Website</title>
+
 
    <link rel="stylesheet" href="style.css">
-
    <style>
-      /* Alleen de indeling van de blokjes aangepast */
-      .content-boxes {
-         display: grid;
-         grid-template-columns: repeat(2, minmax(0, 1fr));
-         gap: 22px;
-         margin-top: 28px;
-      }
+   .dropbtn {
+    background-color: #4cafad;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown {
+  position: relative;
+}
 
-      /* Het eerste blok is breder */
-      .content-box:first-child {
-         grid-column: 1 / -1;
-         display: flex;
-         align-items: center;
-         gap: 25px;
-         text-align: left;
-      }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
 
-      .content-box:first-child h2 {
-         min-width: 100px;
-         font-size: 30px;
-      }
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
-      /* De twee onderste blokjes */
-      .content-box:nth-child(2),
-      .content-box:nth-child(3) {
-         min-height: 220px;
-         text-align: center;
-         border-radius: 30px 18px 30px 18px;
-      }
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
 
-      .content-box {
-         transition: transform 0.25s ease;
-      }
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-      .content-box:hover {
-         transform: translateY(-5px);
-      }
-
-      @media (max-width: 650px) {
-         .content-boxes {
-            grid-template-columns: 1fr;
-         }
-
-         .content-box:first-child {
-            grid-column: auto;
-            flex-direction: column;
-            align-items: flex-start;
-         }
-      }
-   </style>
-</head>
+.dropdown:hover .dropbtn {
+  background-color: #3e8e8a;
+}
+</style>
 
 <body>
+
 
    <!-- Achtergrond -->
    <div class="background"></div>
 
-   <!-- Navigatie -->
-   <header class="navbar">
 
-       <a href="index.html" class="logo">
-           Welcome to my website
-       </a>
+  <header class="navbar">
 
-       <nav class="nav-links">
-          <a href="index.html" class="active">Home</a>
-          <a href="pagina2.html">het binairstelsel</a>
-          <a href="pagina3.html">Music</a>
-          <a href="binairstelsel.html">Het binairstelsel</a>
-          <a href="kleurmodellen.html">kleurmodellen</a>
-       </nav>
+
+   <a href="index.html" class="logo">
+       Welcome to my website ୭
+   </a>
+
+
+   <nav class="nav-links">
+       <a href="index.html" class="active">Home</a>
+       <a href="pagina2.html">About me</a>
+       <a href="pagina3.html">Music</a>
+       <div class="dropdown">
+         <button class="dropbtn">Computer science</button>
+         <div class="dropdown-content">
+         <a href="binairstelsel.html">Het binairstelsel</a>
+         <a href="AI.html">AI</a>
+         <a href="kleurmodellen.html">kleurmodellen</a>
+  </div>
 
        <div class="search-container">
            <input
